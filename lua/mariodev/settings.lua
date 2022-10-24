@@ -7,7 +7,7 @@ local cmd = vim.cmd
 cmd[[colorscheme dracula]]
 
 o.termguicolors = true
-o.background = 'dark'
+--o.background = 'dark'
 
 -- Do not save when switching buffers
 -- o.hidden = true
@@ -21,16 +21,16 @@ o.scrolloff = 8
 
 -- Better editor UI
 o.number = true
-o.numberwidth = 5
+o.numberwidth = 2
 o.relativenumber = true
 o.signcolumn = 'yes:2'
 o.cursorline = false
 
 -- Better editing experience
 o.expandtab = true
--- o.smarttab = true
+o.smarttab = true
 o.cindent = true
--- o.autoindent = true
+o.autoindent = true
 o.wrap = false
 o.textwidth = 300
 o.tabstop = 4
@@ -72,4 +72,4 @@ g.mapleader = ' '
 g.maplocalleader = ' '
 
 -- Set transparency to true
-g.transparent_enable = true
+g.transparent_window = true
