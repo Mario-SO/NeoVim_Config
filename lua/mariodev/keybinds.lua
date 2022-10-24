@@ -32,9 +32,9 @@ map('n', '<leader>]', '<CMD>bn<CR>')
 map('n', "''", '<CMD>b#<CR>')
 
 -- Copying the vscode behaviour of making tab splits
-map('n', '<C-\\>', '<CMD>vsplit<CR>')
-map('n', '<A-\\>', '<CMD>split<CR>')
-
+map('n', '<leader>v', ':vsplit<CR>')
+map('n', '<leader>h', ':split<CR>')
+map('n', '<leader>c', ':q<CR>')
 -- Move line up and down in NORMAL and VISUAL modes
 -- Reference: https://vim.fandom.com/wiki/Moving_lines_up_or_down
 map('n', '<C-j>', '<CMD>move .+1<CR>')
