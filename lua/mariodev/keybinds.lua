@@ -4,7 +4,7 @@ end
 
 -- <leader> , disables higlighting
 map('n', '<leader>,', ':noh<CR>')
-map('n', '<leader>z', ':Format<CR>')
+map('n', '<leader>s', ':Format<CR>')
 
 -- Fix * (Keep the cursor position, don't move to next match)
 map('n', '*', '*N')
