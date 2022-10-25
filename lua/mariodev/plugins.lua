@@ -13,6 +13,17 @@ return require("packer").startup({
 
 		use("Mofiqul/dracula.nvim")
 
+        use({
+            "xiyaowong/nvim-transparent",
+            config = function()
+                require("mariodev.plugins.nvim-transparent").setup({
+                    enable = true,
+                    extra_groups = {},
+                    exclude = {},
+        })
+            end,
+        })
+
 		use({
 			"williamboman/mason.nvim",
 			config = function()

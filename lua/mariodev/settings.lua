@@ -67,9 +67,9 @@ o.splitbelow = true
 -- Preserve view while jumping
 o.jumpoptions = 'view'
 
+-- Set transparency on start
+g.transparent_enabled = true
+
 -- Map <leader> to space
 g.mapleader = ' '
 g.maplocalleader = ' '
-
--- Set transparency to true
-g.transparent_window = true
