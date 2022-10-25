@@ -4,7 +4,7 @@ end
 
 -- <leader> , disables higlighting
 map('n', '<leader>,', ':noh<CR>')
-map('n', '<leader>s', ':Format<CR>')
+map('n', '<leader>s', ':source %<CR>')
 
 -- Fix * (Keep the cursor position, don't move to next match)
 map('n', '*', '*N')
@@ -25,14 +25,8 @@ map('i', '<C-A>', '<ESC>I')
 map('n', '<leader>w', '<CMD>update<CR>')
 map('n', '<leader>W', '<CMD>wall<CR>')
 
--- Move to the next/previous buffer
-map('n', '<leader>[', '<CMD>bp<CR>')
-map('n', '<leader>]', '<CMD>bn<CR>')
-
--- Move to last buffer
-map('n', "''", '<CMD>b#<CR>')
-
 -- Copying the vscode behaviour of making tab splits
+
 map('n', '<leader>v', ':vsplit<CR>')
 map('n', '<leader>h', ':split<CR>')
 map('n', '<leader>c', ':q<CR>')
@@ -47,3 +41,7 @@ map('x', '<C-k>', ":move '<-2<CR>gv=gv")
 -- e.g. dA = delete buffer ALL, yA = copy whole buffer ALL
 map('o', 'A', ':<C-U>normal! mzggVG<CR>`z')
 map('x', 'A', ':<C-U>normal! ggVG<CR>')
+
+-- Telescope keybinds
+map('n', '<leader>ff', ':Telescope find_files<CR>')
+map('n', '<leader>FF', ':Telescope live_grep<CR>')
