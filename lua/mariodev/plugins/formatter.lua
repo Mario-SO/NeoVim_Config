@@ -39,6 +39,9 @@ require("formatter").setup {
       end
     },
 
+    rust = {
+
+    },
     -- Use the special "*" filetype for defining formatter configurations on
     -- any filetype
     ["*"] = {

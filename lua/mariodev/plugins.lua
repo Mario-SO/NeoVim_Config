@@ -14,13 +14,6 @@ return require("packer").startup({
 		use("Mofiqul/dracula.nvim")
 
 		use({
-			"mhartington/formatter.nvim",
-			config = function()
-				require("mariodev.plugins.formatter")
-			end,
-		})
-
-		use({
 			"williamboman/mason.nvim",
 			config = function()
 				require("mason").setup()
