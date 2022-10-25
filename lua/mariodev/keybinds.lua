@@ -26,10 +26,13 @@ map('n', '<leader>w', '<CMD>update<CR>')
 map('n', '<leader>W', '<CMD>wall<CR>')
 
 -- Copying the vscode behaviour of making tab splits
+map('n', '<leader>v', ':vsplit | Telescope find_files<CR>')
+map('n', '<leader>h', ':split | Telescope find_files<CR>')
+-- close view but keep it in the buffer list
+map('n', '<leader>c', ':q<CR>') 
+-- close view and remove it from the buffer list
+map('n', '<leader>q', ':bw<CR>') 
 
-map('n', '<leader>v', ':vsplit<CR>')
-map('n', '<leader>h', ':split<CR>')
-map('n', '<leader>c', ':q<CR>')
 -- Move line up and down in NORMAL and VISUAL modes
 -- Reference: https://vim.fandom.com/wiki/Moving_lines_up_or_down
 map('n', '<C-j>', '<CMD>move .+1<CR>')
@@ -42,6 +45,12 @@ map('x', '<C-k>', ":move '<-2<CR>gv=gv")
 map('o', 'A', ':<C-U>normal! mzggVG<CR>`z')
 map('x', 'A', ':<C-U>normal! ggVG<CR>')
 
--- Telescope keybinds
+------------------------
+-- Telescope keybinds --
+------------------------
+-- Files
 map('n', '<leader>ff', ':Telescope find_files<CR>')
-map('n', '<leader>FF', ':Telescope live_grep<CR>')
+map('n', '<leader>fg', ':Telescope live_grep<CR>')
+
+-- Buffers
+map('n', '<leader>fb', ':Telescope buffers<CR>')
