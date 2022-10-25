@@ -11,6 +11,14 @@ return require('packer').startup({
     --------------------
     use('wbthomason/packer.nvim')
     use('Mofiqul/dracula.nvim')
+
+    use({
+            'williamboman/mason.nvim',
+            config = function()
+                require('mason').setup()
+            end,
+        })
+
     use({
             'zbirenbaum/copilot.lua',
             event = "InsertEnter",
