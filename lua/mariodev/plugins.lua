@@ -14,8 +14,9 @@ return require("packer").startup({
 		use({
             "Mofiqul/dracula.nvim",
             config = function()
-               require("mariodev.plugins.dracula")
+               require("mariodev.plugins.dracula")            
             end,
+
         })
 
         -- use("https://github.com/xiyaowong/nvim-transparent")

@@ -1,10 +1,9 @@
 -- Vanilla Config
-vim.cmd[[colorscheme dracula]]
-
-require('mariodev.plugins')
 require('mariodev.settings')
+require('mariodev.plugins')
 require('mariodev.keybinds')
 
+vim.cmd[[colorscheme dracula]]
 
 ---Pretty print lua table
 function _G.dump(...)

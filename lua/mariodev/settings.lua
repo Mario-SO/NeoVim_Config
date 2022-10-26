@@ -1,7 +1,7 @@
 local g = vim.g
 local o = vim.o
 
--- o.termguicolors = true
+o.termguicolors = true
 
 -- Do not save when switching buffers
 -- o.hidden = true
