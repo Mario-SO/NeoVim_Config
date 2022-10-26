@@ -83,6 +83,7 @@ _G.packer_plugins = {
     url = "https://github.com/zbirenbaum/copilot.lua"
   },
   ["dracula.nvim"] = {
+    config = { "\27LJ\2\n8\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\29mariodev.plugins.dracula\frequire\0" },
     loaded = true,
     path = "/home/mario/.local/share/nvim/site/pack/packer/start/dracula.nvim",
     url = "https://github.com/Mofiqul/dracula.nvim"
@@ -112,13 +113,8 @@ _G.packer_plugins = {
     path = "/home/mario/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
-  ["nvim-transparent"] = {
-    loaded = true,
-    path = "/home/mario/.local/share/nvim/site/pack/packer/start/nvim-transparent",
-    url = "https://github.com/xiyaowong/nvim-transparent"
-  },
   ["nvim-treesitter"] = {
-    after = { "nvim-treesitter-refactor", "nvim-ts-context-commentstring", "nvim-treesitter-textobjects", "nvim-ts-autotag", "playground" },
+    after = { "nvim-ts-autotag", "nvim-ts-context-commentstring", "playground", "nvim-treesitter-textobjects", "nvim-treesitter-refactor" },
     config = { "\27LJ\2\n;\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0 mariodev.plugins.treesitter\frequire\0" },
     loaded = false,
     needs_bufread = false,
@@ -189,6 +185,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: dracula.nvim
+time([[Config for dracula.nvim]], true)
+try_loadstring("\27LJ\2\n8\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\29mariodev.plugins.dracula\frequire\0", "config", "dracula.nvim")
+time([[Config for dracula.nvim]], false)
 -- Config for: mason.nvim
 time([[Config for mason.nvim]], true)
 try_loadstring("\27LJ\2\n3\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\nmason\frequire\0", "config", "mason.nvim")
@@ -197,9 +197,9 @@ vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Event lazy-loads
 time([[Defining lazy-load event autocommands]], true)
+vim.cmd [[au BufEnter * ++once lua require("packer.load")({'lualine.nvim'}, { event = "BufEnter *" }, _G.packer_plugins)]]
 vim.cmd [[au InsertEnter * ++once lua require("packer.load")({'copilot.lua'}, { event = "InsertEnter *" }, _G.packer_plugins)]]
 vim.cmd [[au CursorHold * ++once lua require("packer.load")({'nvim-treesitter'}, { event = "CursorHold *" }, _G.packer_plugins)]]
-vim.cmd [[au BufEnter * ++once lua require("packer.load")({'lualine.nvim'}, { event = "BufEnter *" }, _G.packer_plugins)]]
 time([[Defining lazy-load event autocommands]], false)
 vim.cmd("augroup END")
 

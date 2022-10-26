@@ -1,6 +1,6 @@
 require('lualine').setup({
     options = {
-        theme = 'dracula',
+        theme = 'dracula-nvim',
         component_separators = '',
         section_separators = '',
         icons_enabled = true,
@@ -20,7 +20,6 @@ require('lualine').setup({
         },
         lualine_x = {
             'filetype',
-            'encoding',
             'fileformat',
         },
         lualine_y = { 'progress' },

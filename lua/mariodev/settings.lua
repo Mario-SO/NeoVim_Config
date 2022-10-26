@@ -1,13 +1,7 @@
 local g = vim.g
 local o = vim.o
-local cmd = vim.cmd
 
--- cmd('syntax on')
--- vim.api.nvim_command('filetype plugin indent on')
-cmd[[colorscheme dracula]]
-
-o.termguicolors = true
---o.background = 'dark'
+-- o.termguicolors = true
 
 -- Do not save when switching buffers
 -- o.hidden = true
@@ -67,9 +61,8 @@ o.splitbelow = true
 -- Preserve view while jumping
 o.jumpoptions = 'view'
 
--- Set transparency on start
-g.transparent_enabled = true
-
 -- Map <leader> to space
 g.mapleader = ' '
 g.maplocalleader = ' '
+
+
