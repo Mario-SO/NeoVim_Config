@@ -2,6 +2,7 @@ local g = vim.g
 local o = vim.o
 
 o.termguicolors = true
+vim.cmd[[colorscheme catppuccin]]
 
 -- Do not save when switching buffers
 -- o.hidden = true

@@ -11,15 +11,12 @@ return require("packer").startup({
 		--------------------
 		use("wbthomason/packer.nvim")
 
-		use({
-            "Mofiqul/dracula.nvim",
+        use ({
+            "catppuccin/nvim",
             config = function()
-               require("mariodev.plugins.dracula")            
+                require("mariodev.plugins.catppuccin")
             end,
-
         })
-
-        -- use("https://github.com/xiyaowong/nvim-transparent")
 
         use ({
              'nvim-telescope/telescope.nvim', tag = '0.1.0',
