@@ -6,6 +6,8 @@ vim.cmd[[colorscheme catppuccin]]
 
 -- Do not save when switching buffers
 -- o.hidden = true
+-- vim.cmd[[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()]]
+-- vim.cmd[[autocmd BufWritePre * lua vim.lsp.buf.formatting_sync()]]
 
 -- Decrease update time
 o.timeoutlen = 500

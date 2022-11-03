@@ -12,7 +12,7 @@ require('lualine').setup({
         },
         lualine_b = {
             { 'branch' },
-            { 'diff', colored = false },
+            { 'diff', colored = true },
         },
         lualine_c = {
             { 'filename', file_status = true },

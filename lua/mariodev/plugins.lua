@@ -11,22 +11,40 @@ return require("packer").startup({
 		--------------------
 		use("wbthomason/packer.nvim")
 
-        use ({
-            "catppuccin/nvim",
-            config = function()
-                require("mariodev.plugins.catppuccin")
-            end,
-        })
+		use({
+			"catppuccin/nvim",
+			config = function()
+				require("mariodev.plugins.catppuccin")
+			end,
+		})
 
-        use ({
-             'nvim-telescope/telescope.nvim', tag = '0.1.0',
-             requires = { {'nvim-lua/plenary.nvim'} },
-        })
-
+		use({
+			"nvim-telescope/telescope.nvim",
+			tag = "0.1.0",
+			requires = { { "nvim-lua/plenary.nvim" } },
+		})
 		use({
 			"williamboman/mason.nvim",
 			config = function()
 				require("mason").setup()
+			end,
+		})
+
+		use({
+			"williamboman/mason-lspconfig.nvim",
+			config = function()
+				require("mason-lspconfig").setup()
+				require("lspconfig").rust_analyzer.setup{}
+				require("lspconfig").gopls.setup{}
+			end,
+		})
+
+		use("neovim/nvim-lspconfig")
+
+		use({
+			"jose-elias-alvarez/null-ls.nvim",
+			config = function()
+				require("mariodev.plugins.null-ls")
 			end,
 		})
 

@@ -6,6 +6,9 @@ end
 map('n', '<leader>,', ':noh<CR>')
 map('n', '<leader>s', ':source %<CR>')
 
+-- Format code
+map('n', '<leader>fc', ':lua vim.lsp.buf.format()<CR>')
+
 -- Fix * (Keep the cursor position, don't move to next match)
 map('n', '*', '*N')
 
