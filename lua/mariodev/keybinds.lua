@@ -6,9 +6,6 @@ end
 map('n', '<leader>,', ':noh<CR>')
 map('n', '<leader>s', ':source %<CR>')
 
--- Format code
-map('n', '<leader>fc', ':lua vim.lsp.buf.format()<CR>')
-
 -- Fix * (Keep the cursor position, don't move to next match)
 map('n', '*', '*N')
 
@@ -32,9 +29,9 @@ map('n', '<leader>W', '<CMD>wall<CR>')
 map('n', '<leader>v', ':vsplit | Telescope find_files<CR>')
 map('n', '<leader>h', ':split | Telescope find_files<CR>')
 -- close view but keep it in the buffer list
-map('n', '<leader>c', ':q<CR>') 
+map('n', '<leader>c', ':q<CR>')
 -- close view and remove it from the buffer list
-map('n', '<leader>q', ':bw<CR>') 
+map('n', '<leader>q', ':bw<CR>')
 
 -- Move line up and down in NORMAL and VISUAL modes
 -- Reference: https://vim.fandom.com/wiki/Moving_lines_up_or_down
