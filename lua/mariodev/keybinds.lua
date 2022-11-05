@@ -13,17 +13,10 @@ map('n', '*', '*N')
 map('i', 'jk', '<ESC>')
 map('x', 'jk', '<ESC>')
 
--- Fix n and N. Keeping cursor in center
-map('n', 'n', 'nzz')
-map('n', 'N', 'Nzz')
-
--- Mimic shell movements
-map('i', '<C-E>', '<ESC>A')
-map('i', '<C-A>', '<ESC>I')
-
 -- Quickly save the current buffer or all buffers
-map('n', '<leader>w', '<CMD>update<CR>')
-map('n', '<leader>W', '<CMD>wall<CR>')
+
+map('n', '<leader>w', ':w<CR>')
+map('n', '<leader>W', ':wall<CR>')
 
 -- Copying the vscode behaviour of making tab splits
 map('n', '<leader>v', ':vsplit | Telescope find_files<CR>')
