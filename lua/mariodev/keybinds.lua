@@ -4,7 +4,6 @@ end
 
 -- <leader> , disables higlighting
 map('n', '<leader>,', ':noh<CR>')
-map('n', '<leader>s', ':source %<CR>')
 
 -- Fix * (Keep the cursor position, don't move to next match)
 map('n', '*', '*N')
@@ -14,7 +13,7 @@ map('i', 'jk', '<ESC>')
 map('x', 'jk', '<ESC>')
 
 -- Quickly save the current buffer or all buffers
-
+map('n', '<leader>s', ':source %<CR>')
 map('n', '<leader>w', ':w<CR>')
 map('n', '<leader>W', ':wall<CR>')
 
@@ -28,8 +27,8 @@ map('n', '<leader>q', ':bw<CR>')
 
 -- Move line up and down in NORMAL and VISUAL modes
 -- Reference: https://vim.fandom.com/wiki/Moving_lines_up_or_down
-map('n', '<C-j>', '<CMD>move .+1<CR>')
-map('n', '<C-k>', '<CMD>move .-2<CR>')
+map('n', '<C-j>', ':move .+1<CR>')
+map('n', '<C-k>', ':move .-2<CR>')
 map('x', '<C-j>', ":move '>+1<CR>gv=gv")
 map('x', '<C-k>', ":move '<-2<CR>gv=gv")
 
@@ -41,9 +40,9 @@ map('x', 'A', ':<C-U>normal! ggVG<CR>')
 ------------------------
 -- Telescope keybinds --
 ------------------------
+
 -- Files
-map('n', '<leader>ff', ':Telescope find_files<CR>')
-map('n', '<leader>fg', ':Telescope live_grep<CR>')
+map('n', '<leader>o', ':Telescope find_files<CR>')
 
 -- Buffers
-map('n', '<leader>fb', ':Telescope buffers<CR>')
+map('n', '<leader>b', ':Telescope buffers<CR>')
